@@ -1,2 +1,12 @@
-# Ecommerce-site-symfony
-Training website on Symfony
+# Ifruit
+Apple's web site replica to trainning
+
+Install package
+```
+composer udpate
+```
+
+Run serveur
+```
+symfony serve
+```
