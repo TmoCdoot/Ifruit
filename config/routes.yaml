@@ -10,3 +10,27 @@ kernel:
 home:
     path: /
     controller: App\Controller\HomeController::index
+
+ibigo:
+    path: /ibigo
+    controller: App\Controller\IbigoController::index
+
+fruitbook:
+    path: /fruitbook
+    controller: App\Controller\FruitBookController::index
+
+isuperordi:
+    path: /isuperordi
+    controller: App\Controller\IsuperOrdiController::index
+
+imontre:
+    path: /imontre
+    controller: App\Controller\ImontreController::index
+
+ibigbigo:
+    path: /ibigbigo
+    controller: App\Controller\IbigBigoController::index
+
+iecouteur:
+    path: /iecouteur
+    controller: App\Controller\IecouteurController::index

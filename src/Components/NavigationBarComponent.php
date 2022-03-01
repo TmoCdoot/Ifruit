@@ -4,8 +4,8 @@ namespace App\Components;
 
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
-#[AsTwigComponent('alert')]
-class AlertComponent
+#[AsTwigComponent('nav-bar')]
+class NavigationBarComponent
 {
     public string $message;
 }

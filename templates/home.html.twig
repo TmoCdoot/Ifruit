@@ -1,0 +1,47 @@
+{# templates/user/notifications.html.twig #}
+{{ component('nav-bar') }}
+<div class="container">
+    <span>
+        <h1>Ibigo 13 Pro</h1>
+        <h3>The most powerful Bigo ever made by Ifruit</h3>
+    </span>
+    <div class="product-container">
+        <div class="product-image">
+            <img src="{{ asset('images/ibigo13.png') }}" alt="Ibigo 13 Pro">
+        </div>
+        <div class="product-text">
+            <span>
+                <h1>Your new superpower.</h1>
+                <h3>You can choose your method of payment, save by taking back a device, benefit from a quick configuration and discuss with our Specialists.</h3>
+            </span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        border: 1px solid red;
+    }
+
+    .container span > * {
+        text-align: center;
+    }
+
+    .product-container {
+        border: 1px solid yellow;
+        display: flex;
+        flex-direction: row;
+    }
+    .product-image {
+        border: 1px solid green;    
+    }
+
+    .product-text {
+        
+    }
+</style>
+
+
+
+
+
