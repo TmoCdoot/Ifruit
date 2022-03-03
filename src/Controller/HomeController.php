@@ -5,6 +5,8 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
+var_dump($_SERVER);
+
 class HomeController extends AbstractController
 {
     public function index():Response
