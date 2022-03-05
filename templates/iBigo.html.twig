@@ -1,4 +1,33 @@
 {# templates/user/notifications.html.twig #}
+
+
 {{ component('nav-bar') }}
+
 <h1>Ibigo</h1>
+
+{{ form_start(form) }}
+
+    <div class="row_containe">
+        {{ form_row(form.name) }}
+    </div>
+    <div class="row_containe">
+        {{ form_row(form.description) }}
+    </div>
+    <div class="row_containe">
+        {{ form_row(form.price) }}
+    </div>
+    <div class="row_containe">
+        {{ form_row(form.widthScreen) }}
+    </div>
+    <div class="row_containe">
+        {{ form_row(form.heightScreen) }}
+    </div>
+    <div class="row_containe">
+        {{ form_row(form.reference) }}
+    </div>
+    <button>
+        Add
+    </button>
+
+{{ form_end(form) }}
 
