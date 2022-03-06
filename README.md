@@ -56,8 +56,8 @@ First, import the different classes
 
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
-use App\Entity\IbigoProduct;
-use App\Form\IbigoType;
+use App\Entity\IsuperOrdiProduct;
+use App\Form\IsuperOrdiType;
 
 ```
 
@@ -65,7 +65,7 @@ After, create class annd index function (or a other name) with `Request` and `Ma
 
 ```php
 
-class IbigoController extends AbstractController
+class IsuperOrdiController extends AbstractController
 {
     public function index(Request $request, ManagerRegistry $doctrine):Response
     {}
@@ -75,15 +75,15 @@ class IbigoController extends AbstractController
 Add on class controller, new oject related to entity, create form and its processing
 
 ```php
-$ibigo = new IbigoProduct();
-$form = $this->createForm(IbigoType::class, $ibigo);
+$isuperOrdi = new IsuperOrdiProduct();
+$form = $this->createForm(IsuperOrdiType::class, $isuperOrdi);
 
        //traitement formuilaire
        $form->handleRequest($request);
        if ($form->isSubmitted() && $form->isValid()) {
             $em = $doctrine->getManager();
 
-            $em->persist($ibigo);
+            $em->persist($isuperOrdi);
             $em->flush();
        }
 ```
@@ -91,7 +91,7 @@ $form = $this->createForm(IbigoType::class, $ibigo);
 To finish, return render with your templates and add on param this form
 
 ```php
-return $this->render('iBigo.html.twig', [
+return $this->render('iSuperOrdi.html.twig', [
     "form" => $form->createView()
     ]);
 ```
