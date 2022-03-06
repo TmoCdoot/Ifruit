@@ -2,30 +2,30 @@
 Apple's web site replica to trainning
 
 Install package
+
 ```
 composer udpate
 ```
 
 Run serveur
+
 ```
 symfony serve
 ```
 
-## Command 
-
-### Entity
+## Entity
 
 To create entity (create class of databse table)
 
 `php bin/console make:entity`
 
-#### Option
+### Option
 
-+ 1 Choose entity name
-+ 2 Add property name / Add type property / Add length (optional) / Default is nul (yes/no)
-+ 3 Add a other property or next (press enter)
++ Choose entity name
++ Add property name / Add type property / Add length (optional) / Default is nul (yes/no)
++ Add a other property or next (press enter)
 
-#### Create migration
+### Create migration
 
 Migration is created to insert a table related to the recently created entity
 
@@ -35,18 +35,18 @@ After the migration create, use this command to execute the migration to add thi
 
 `php bin/console doctrine:migration:migrate`
 
-### Form
+## Form
 
 To create a form, use this command
 
 `php bin/console make:form`
 
-#### Option
+### Option
 
-+ 1 Choose form name
-+ 2 Enter entity name used with this form
++ Choose form name
++ Enter entity name used with this form
 
-#### Add form in entity controller
+### Add form in entity controller
 
 _Controller file_
 
@@ -96,7 +96,7 @@ return $this->render('iBigo.html.twig', [
     ]);
 ```
 
-#### Add params on input form
+### Add params on input form
 
 _Form file_
 
@@ -108,7 +108,7 @@ To params on input form, add after input name the type of input `TextType::class
                 ]
             ])
 ```
-#### Add form in template
+### Add form in template
 
 _Template file_
 
