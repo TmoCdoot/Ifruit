@@ -8,17 +8,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\IbigoProduct;
+use App\Repository\IbigoProductRepository;
 use App\Form\IbigoType;
 
 class IbigoController extends AbstractController
 {
-    public function index():Response
+    public function index(IbigoProductRepository $IbigoProductRepository):Response
     {
         $ibigo = new IbigoProduct();
         $form = $this->createForm(IbigoType::class, $ibigo);
 
         return $this->render('iBigo.html.twig', [
-            "form" => $form->createView()
+            "form" => $form->createView(),
+            "ibigo" => $IbigoProductRepository->findBy(["id" => 1])
         ]);
     }
 

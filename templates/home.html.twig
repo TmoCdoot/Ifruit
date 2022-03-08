@@ -1,44 +1,113 @@
 {# templates/user/notifications.html.twig #}
 {{ component('nav-bar') }}
 <div class="container">
-    <span>
-        <h1>Ibigo 13 Pro</h1>
-        <h3>The most powerful Bigo ever made by Ifruit</h3>
-    </span>
+    <div class="title">
+        <h1>IBigo 13</h1>
+        <h3>The best of the phone</h3>
+    </div>
     <div class="product-container">
-        <div class="product-image">
-            <img src="{{ asset('images/ibigo13.png') }}" alt="Ibigo 13 Pro">
+        <div class="product-image ">
+            <img src="{{ asset('images/13.png') }}" alt="Ibigo 13 Pro">
         </div>
-        <div class="product-text">
-            <span>
-                <h1>Your new superpower.</h1>
-                <h3>You can choose your method of payment, save by taking back a device, benefit from a quick configuration and discuss with our Specialists.</h3>
-            </span>
+        <div class="product-button">
+            <a href="" class="shop">BUY</a>
+        </div>
+    </div>
+    <div class="product-container">
+        <div class="row1"> 
+            <img src="{{ asset('images/book.png') }}" alt="IFruitBook">
+        </div>
+        <div class="row2">
+            <img src="{{ asset('images/watch.png') }}" alt="IClock">
+        </div>
+        <div class="row3">
+            <img src="{{ asset('images/ipad.png') }}" alt="ITablette">
         </div>
     </div>
 </div>
 
 <style>
     .container {
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
-    .container span > * {
+    .container div > * {
         text-align: center;
-    }
-
-    .product-container {
-        border: 1px solid yellow;
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
-    .product-image {
-        border: 1px solid green;    
+    .title h1 {
+        margin-bottom: 0px;
+    }
+    .title h3 {
+        margin: 5px;
+    }
+    .product-container {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        height: 80vh;
+    }
+    .product-image { 
+        border: 1px solid green;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 8;
+    }
+    .product-image img { 
+        width: 70%;
+        margin-top: -15px;
+    }
+    .product-button {
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 4;
+    }
+    .shop  {
+        /* border: 1px solid red; */
+        position: absolute;
+        bottom: 100px;
+        background-color: #f7b5f3;
+        padding: 15px 50px;
+        border-radius: 5px;
+    }
+    .row1{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 8;
+        overflow: hidden;
+        animation: 1s delay-overflow;
+    }
+    .row1 img, .row2 img, .row3 img {
+        height: 70%;
+        object-fit: cover;
+    }
+    .row1:hover {
+        overflow: initial;
+        animation: 1s delay-overflow;
+    }
+    .row2{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 8;
+        overflow: hidden;
+    }
+    .row3{
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 8;
+        overflow: hidden;
+    }
+    .row1,.row2, .row3 {
+        border: 1px solid;
     }
 
-    .product-text {
-        
-    }
 </style>
 
 

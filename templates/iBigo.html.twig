@@ -2,8 +2,16 @@
 
 
 {{ component('nav-bar') }}
+ 
 
-<h1>Ibigo</h1>
+{{ dump(ibigo) }}
+
+{% for ibigos in ibigo %}
+    {{ ibigos.name }}
+{% endfor %}
+
+
+<h1>IBigo</h1>
 
 <div class="form_container">
     {{ form_start(form, {'action': 'submitformibigo'}) }}
