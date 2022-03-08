@@ -34,3 +34,7 @@ ibigbigo:
 iecouteur:
     path: /iecouteur
     controller: App\Controller\IecouteurController::index
+
+ibigoform:
+    path: /submitformibigo
+    controller: App\Controller\IbigoController::submit

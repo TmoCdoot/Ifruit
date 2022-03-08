@@ -5,29 +5,64 @@
 
 <h1>Ibigo</h1>
 
-{{ form_start(form) }}
+<div class="form_container">
+    {{ form_start(form, {'action': 'submitformibigo'}) }}
 
     <div class="row_containe">
-        {{ form_row(form.name) }}
+        {{ form_label(form.name, 'Name') }}
+        {{ form_widget(form.name) }}
     </div>
     <div class="row_containe">
-        {{ form_row(form.description) }}
+        {{ form_label(form.description, 'Description') }}
+        {{ form_widget(form.description) }}
     </div>
     <div class="row_containe">
-        {{ form_row(form.price) }}
+        {{ form_label(form.price, 'Price')}}
+        {{ form_widget(form.price) }}
     </div>
     <div class="row_containe">
-        {{ form_row(form.widthScreen) }}
+        {{ form_label(form.widthScreen, 'Width screen') }}
+        {{ form_widget(form.widthScreen) }}
     </div>
     <div class="row_containe">
-        {{ form_row(form.heightScreen) }}
+        {{ form_label(form.heightScreen, 'Height screen') }}
+        {{ form_widget(form.heightScreen) }}
     </div>
     <div class="row_containe">
-        {{ form_row(form.reference) }}
+        {{ form_label(form.reference, 'Référence')}}
+        {{ form_widget(form.reference) }}
     </div>
     <button>
         Add
     </button>
 
 {{ form_end(form) }}
+</div>
 
+
+<style>
+    .row_containe {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+    }
+    .form_container {
+        border: 1px solid yellow;
+    }
+    .form {
+        width: 300px;
+        border-radius: 10px;
+        background: #c9c9c9;
+        border: 2px solid #f1f1f1;width: 300px;
+        margin-bottom: 5px;
+    }
+    label {
+        margin-bottom: 5px;
+    }
+    button {
+        border-radius: 10px;
+        border: none;
+        padding: 10px 30px 10px 30px;
+        font-weight: bold;
+    }
+</style>
