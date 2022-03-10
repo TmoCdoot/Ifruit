@@ -6,36 +6,39 @@
         <h3>The best of the phone</h3>
     </div>
     <div class="product-container">
-        <div class="product-image ">
+        <div class="product-image">
             <img src="{{ asset('images/13.png') }}" alt="Ibigo 13 Pro">
         </div>
         <div class="product-button">
-            <a href="" class="shop">BUY</a>
+            <a href="" class="shop">BUY</a> 
         </div>
     </div>
-    <div class="product-container">
-        <div class="row1"> 
-            <img src="{{ asset('images/book.png') }}" alt="IFruitBook">
+    <div class="product-carroussel">
+        <div class="row1" style="background-image: url('../images/book.png');"> 
+            <div class="text"><h3>IFruitBook</h3></div>
         </div>
-        <div class="row2">
-            <img src="{{ asset('images/watch.png') }}" alt="IClock">
+        <div class="row2"  style="background-image: url('../images/watch.png');">
+            <div class="text"><h3>IClock Série 4</h3></div>
         </div>
-        <div class="row3">
-            <img src="{{ asset('images/ipad.png') }}" alt="ITablette">
+        <div class="row3"  style="background-image: url('../images/ipad.png');">
+            <div class="text"><h3>ITablette</h3></div>
+            <!-- <img src="{{ asset('images/ipad.png') }}" alt="ITablette"> -->
         </div>
+        <div class="row4"  style="background-image: url('../images/imac.png');">
+            <div class="text"><h3>IOrdi</h3></div>
+            <!-- <img src="{{ asset('images/watch.png') }}" alt="IClock"> -->
+        </div>
+    </div>
+    <div class="product-footer">
+
     </div>
 </div>
 
 <style>
-    .container {
-        /* border: 1px solid red; */
-    }
-
     .container div > * {
         text-align: center;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
     .title h1 {
         margin-bottom: 0px;
@@ -44,14 +47,29 @@
         margin: 5px;
     }
     .product-container {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(7, 1fr);
         height: 80vh;
+        align-items: center;
+        background: linear-gradient(#fcfaf3, 95%, #d9d9d9);
+    }
+    .product-carroussel {
+        /* border: 1px solid red; */
+        height: 70vh;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px 0px;
+        background: linear-gradient(#d8d8d8, 5%, #c3c3c3);
+    }
+    .product-footer {
+        border: 1px solid red;
+        height: 20vh;
+        background: linear-gradient(#c7c7c7, 5%, #fbf9f3);
     }
     .product-image { 
-        border: 1px solid green;
+        /* border: 1px solid green; */
         grid-column-start: 1;
         grid-column-end: 8;
         grid-row-start: 1;
@@ -74,38 +92,38 @@
         padding: 15px 50px;
         border-radius: 5px;
     }
-    .row1{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 8;
-        overflow: hidden;
-        animation: 1s delay-overflow;
+    .row1, .row2, .row3, .row4 {
+        border: 1px solid green;
+        width: 40vh;
+        background-size: auto 90%;
+        background-position: center;
+        transition: width 1s cubic-bezier(0.45, 0.01, 0, 1.01), background 1s;
+        align-items: flex-start;
+        background-repeat: no-repeat;
     }
-    .row1 img, .row2 img, .row3 img {
-        height: 70%;
-        object-fit: cover;
+
+    .row1:hover, .row2:hover, .row3:hover, .row4:hover {
+        width: 70vh;
+        background-size: auto 100%;
     }
-    .row1:hover {
-        overflow: initial;
-        animation: 1s delay-overflow;
+    .row1 {
+        border: 2px solid #727176;
+        border-radius: 5px;
     }
-    .row2{
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 8;
-        overflow: hidden;
+    .row2 {
+        border: 2px solid #a0c022;
+        border-radius: 5px;
     }
-    .row3{
-        grid-column-start: 6;
-        grid-column-end: 7;
-        grid-row-start: 1;
-        grid-row-end: 8;
-        overflow: hidden;
+    .row3 {
+        border: 2px solid #fece9e;
+        border-radius: 5px;
     }
-    .row1,.row2, .row3 {
-        border: 1px solid;
+    .row4 {
+        border: 2px solid #151946;
+        border-radius: 5px;
+    }
+    .text {
+        margin-top: 20px;
     }
 
 </style>
